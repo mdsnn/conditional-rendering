@@ -14,7 +14,7 @@ function App() {
     <>
     <div>
       
-      <UserStatus isLoggedIn={isLoggedIn} />
+      <UserStatus isLoggedIn={isLoggedIn} userName="Mwiko" />
 
       <button onClick={toggleLogin}>
         {isLoggedIn ? 'Log out' : 'Log in'}
