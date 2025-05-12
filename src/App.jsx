@@ -15,11 +15,18 @@ function App() {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      toggleStatus();
+    }
+  };
+
   return (
     <div>
       <UserStatus status={status} userName="Alice" />
       <button
         onClick={toggleStatus}
+        onKeyDown={handleKeyDown}
         style={{
           backgroundColor:
             status === 'loggedIn' ? 'red' : status === 'guest' ? 'blue' : 'green',
