@@ -16,7 +16,19 @@ function App() {
       
       <UserStatus isLoggedIn={isLoggedIn} userName="Mwiko" />
 
-      <button onClick={toggleLogin}>
+      <button onClick={toggleLogin}
+       style={{
+          backgroundColor: isLoggedIn ? 'red' : 'green',
+          color: 'white',
+          margin: '10px',
+          padding: '10px 20px',
+          fontSize: '16px',
+          cursor: 'pointer',
+          border: 'none',
+          borderRadius: '4px'
+        }}
+      
+      >
         {isLoggedIn ? 'Log out' : 'Log in'}
       </button>
     </div>
